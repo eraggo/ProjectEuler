@@ -1,0 +1,7 @@
+BEFORE CODING
+Basically i need to find number between 10000 and 999999 which is palindrome, AND is product of 2 3-digit numbers. Thinking to split code as follows:
+-Find out if certain input integer is palindrome separating 5-digit and 6-digit numbers. I am almost sure there is such 6-digit number so maybe 5 digits is no go.
+-Find out if ie. number is actually product of 2 3-digit number (100-999)
+-If both checks i found number
+
+This format is just a test. Helps me think ahead.

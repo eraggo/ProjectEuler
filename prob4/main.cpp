@@ -8,13 +8,14 @@ bool factor(int); // true if can factorize input to 2 3-digit numbers
 
 int main(int argc, const char *argv[])
 {
-	int p=130031;
-	cout << "#" << p << endl;
-	if (isPalindrome(p))
-		cout << "Yay\n";
-	else
-		cout << "nay\n";
-	cout << p << endl;
+	int count=0;
+	for (int i=999999; i>100000; i--) {
+		if (isPalindrome(i)) {
+			cout << i << endl;
+			count++;
+		}
+	}
+	cout << "final count: " << count << endl;
 	return 0;
 }
 
@@ -36,7 +37,6 @@ bool isPalindrome(int in)
 		digit=digit*10+removeLast(in);
 		digit=digit*10+removeLast(in);
 		digit=digit*10+removeLast(in);
-		cout << digit << " " << in << endl;
 		if (digit==in) return true;
 		return false;
 	}

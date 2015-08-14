@@ -8,26 +8,25 @@ bool factor(int); // true if can factorize input to 2 3-digit numbers
 
 int main(int argc, const char *argv[])
 {
-	int count=0;
-	for (int i=999999; i>100000; i--) {
-		if (isPalindrome(i)) {
-			cout << i << endl;
-			count++;
+	bool solved=false;
+	int n=999999;
+	while (!solved) {
+		if (isPalindrome(n)) {
+			if (factor(n))
+				solved=true;
 		}
+		n--;
 	}
-	cout << "final count: " << count << endl;
 	return 0;
 }
 
 bool isPalindrome(int in)
 {
-	// Making sure (not necessary but i did add it anyways)
-	// Maybe i need this function later too
+	// Not needed but i added this if-statement anyways
 	if ((in<10000)||(in>999999)) {
 		cout << "Too small or too big input number" << endl;
 		return false;
 	}
-	// "magic"
 	if (in<100000) { // 5 digit numbers
 		//TODO if can not find 6 digit number palindrome
 	} else { // 6 digit numbers
@@ -51,5 +50,11 @@ int removeLast(int &in)
 
 bool factor(int in)
 {
-
+	for (int i=999;i>1;i--) {
+		if (!(in%i) && in/i<1000) {
+			cout << in << "=" << i << "*" << in/i << endl;
+			return true;
+		}
+	}
+	return false;
 }

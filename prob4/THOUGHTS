@@ -5,3 +5,6 @@ Basically i need to find number between 10000 and 999999 which is palindrome, AN
 -If both checks i found number
 
 This format is just a test. Helps me think ahead.
+
+AFTER FINISHING
+It is funny to solve problems stage-by-stage. Breaking problem (and the code!) in smaller parts makes code more clean and wasily tested. I need to learn remove comments after function works tho...

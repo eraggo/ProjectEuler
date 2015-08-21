@@ -33,9 +33,8 @@ bool isPalindrome(int in)
 		// Remove last digit->another digit*10+removed 3 times
 		// if new digit and cutted down digits are same: palindrome
 		int digit=0;
-		digit=digit*10+removeLast(in);
-		digit=digit*10+removeLast(in);
-		digit=digit*10+removeLast(in);
+		for (int i=0; i<3; i++)
+			digit=digit*10+removeLast(in);
 		if (digit==in) return true;
 		return false;
 	}

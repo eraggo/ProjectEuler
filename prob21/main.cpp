@@ -4,7 +4,13 @@ int sumOfFact(int);
 
 int main(int argc, char const *argv[])
 {
-        std::cout << sumOfFact(978) << std::endl;
+        bool pair[1000];
+        int a;
+        for (int i=1; i<1000; i++) {
+                a=sumOfFact(i);
+                if (sumOfFact(a)==a)
+                        std::cout << a << std::endl;
+        }
         return 0;
 }
 

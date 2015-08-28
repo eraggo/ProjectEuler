@@ -3,8 +3,16 @@
 int countDivs(int); // how many divisors input has?
 bool canDivide(int,int); // not sure how big answer is yet
 
-int main(int argc, char const *argv[]) {
-        std::cout << countDivs(73495) << std::endl;
+int main(int argc, char const *argv[])
+{
+        int current=491*499;
+        while (countDivs(current)<500) {
+                current+=1;
+                if (!(current%10000))
+                        std::cout << current << std::endl;
+        }
+
+        std::cout << current << std::endl;
         return 0;
 }
 
